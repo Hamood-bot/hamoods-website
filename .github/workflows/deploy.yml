@@ -43,10 +43,17 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+
+      - name: Upload build artifact (manual download)
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-dist
+          path: ./portfolio/dist
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: './portfolio/dist'
+          path: ./portfolio/dist
 
       - name: Deploy to GitHub Pages
         id: deployment
