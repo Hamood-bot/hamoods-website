@@ -1,7 +1,12 @@
 import { motion } from 'framer-motion'
-import { FaGithub, FaInstagram } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Hero = () => {
+  const socialVariants = {
+    hover: { scale: 1.1, y: -2 },
+    tap: { scale: 0.95 },
+  }
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-gray-100 dark:from-gray-900 dark:to-gray-800">
       <div className="container mx-auto px-4 py-16 text-center">
@@ -17,24 +22,45 @@ const Hero = () => {
             Software Developer & University Student
           </p>
           <div className="flex justify-center space-x-4">
-            <a
+            <motion.a
               href="https://github.com/Hamood-bot"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary flex items-center"
+              variants={socialVariants}
+              whileHover="hover"
+              whileTap="tap"
+              transition={{ type: 'spring', stiffness: 400, damping: 15 }}
             >
-              <FaGithub className="mr-2" />
+              <FaGithub className="mr-2 text-xl" />
               GitHub
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+              href="https://www.linkedin.com/in/mohammad-sabra-2b8403351"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary flex items-center"
+              variants={socialVariants}
+              whileHover="hover"
+              whileTap="tap"
+              transition={{ type: 'spring', stiffness: 400, damping: 15 }}
+            >
+              <FaLinkedin className="mr-2 text-xl" />
+              LinkedIn
+            </motion.a>
+            <motion.a
               href="https://instagram.com/Moesabra"
               target="_blank"
               rel="noopener noreferrer"
               className="btn btn-primary flex items-center"
+              variants={socialVariants}
+              whileHover="hover"
+              whileTap="tap"
+              transition={{ type: 'spring', stiffness: 400, damping: 15 }}
             >
-              <FaInstagram className="mr-2" />
+              <FaInstagram className="mr-2 text-xl" />
               Instagram
-            </a>
+            </motion.a>
           </div>
         </motion.div>
       </div>
