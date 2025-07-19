@@ -11,7 +11,7 @@ const Footer = () => {
           viewport={{ once: true }}
         >
           <p className="text-sm">
-            © {new Date().getFullYear()} Mohammad Sabra. All rights reserved.
+            © {new Date().getFullYear()} Mohammad Sabra. All rights reserved to tia william william my backbone and will to live.
           </p>
         </motion.div>
       </div>
