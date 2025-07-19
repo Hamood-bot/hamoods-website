@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { FaGithub, FaInstagram } from 'react-icons/fa'
+import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Contact = () => {
   return (
@@ -18,24 +18,39 @@ const Contact = () => {
               Feel free to reach out through any of these platforms!
             </p>
             <div className="flex justify-center space-x-6">
-              <a
+              <motion.a
                 href="https://github.com/Hamood-bot"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary flex items-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <FaGithub className="text-2xl mr-2" />
                 GitHub
-              </a>
-              <a
+              </motion.a>
+              <motion.a
+                href="https://www.linkedin.com/in/mohammad-sabra-2b8403351"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-primary flex items-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <FaLinkedin className="text-2xl mr-2" />
+                LinkedIn
+              </motion.a>
+              <motion.a
                 href="https://instagram.com/Moesabra"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary flex items-center"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <FaInstagram className="text-2xl mr-2" />
                 Instagram
-              </a>
+              </motion.a>
             </div>
           </div>
         </motion.div>
